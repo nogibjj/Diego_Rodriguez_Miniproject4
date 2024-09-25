@@ -1,12 +1,35 @@
-[![CI](https://github.com/nogibjj/Diego_Rodriguez_Miniproject1/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Diego_Rodriguez_Miniproject1/actions/workflows/hello.yml)
-# Python Template
-This is a template that has the scaffold for a python project. Here you can find:
+# GitHub Actions Matrix Build for Multiple Python Versions
+## File Structure 
+```
+Diego_Rodriguez_Individual_Project#4/
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .github/
+|   └── workflows/hello.yml
+├── .gitignore
+├── main.py
+├── Makefile
+├── README.md
+├── requirements.txt
+└── test_main.py
+```
+## Purpose of project
+The purpose of this project is to test multiple python versions and environments in Github Actions. I use `setup-python` action in conjuction with `matrix strategy` to run multiple jobs with different configurations. I use a script `main.py` to check the operating system and python version. 
 
-- .devcointainer has a Docker and a .json file
-- Makefile to automate the python task
-- .github contains the .yml file to ensure CI/CD integregration for code quality
-- Requirements.txt specify the library requirements to run the code
-- Main.py contains the main function of interest
-- Test_main.py contains the testing function for main.py
+## Preparation
+1. Open Github codespaces 
+2. Wait for container to be built and virtual environment to be activated with requirements.txt installed 
+3. Make changes to any parts of the code `main.py` or `test_main.py`
+4. Push to see code testing in different operating systems and different python environments 
 
+## Check format and test errors 
+1. Format code `make format`
+2. Lint code `make lint`
+
+
+3. Test code `make test`
+
+
+## Github actions with matrix strategy 
 
